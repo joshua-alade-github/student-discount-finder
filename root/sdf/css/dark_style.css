@@ -1,0 +1,1082 @@
+html,body{
+  margin: 0;
+  padding: 0;
+	height: 100%;
+}
+body{
+  background-color: rgb(10,16,22);
+  color: white;
+  font-family: 'myriad-pro';
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input[type=checkbox]
+{
+  margin-top: 4px;
+  margin-right: 4px;
+}
+
+#container{
+  min-height: 100%;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+#main{
+  overflow: auto;
+  padding-bottom: 180px;
+}
+
+#footer {
+  background-color: rgb(28,28,28);
+  color:white;
+  height: 80px;
+  position: relative;
+  padding: 20px;
+  margin-top: -80px;
+  clear:both;
+}
+
+#logo{
+  font-family: 'myriad-pro';
+  margin:15px 0px 10px 0px;
+  text-align:center;
+}
+
+#logo:hover{
+  cursor: pointer;
+}
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 0;
+  font-family: 'myriad-pro';
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.1s;
+  padding-top: 60px;
+  opacity: 0.96;
+  z-index: 2;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #818181;
+  display: block;
+  border: none;
+  width: 100%;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  font-family: arial;
+}
+
+.sidenav a{
+  transition: 0.3s;
+}
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  width: 0;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#copyrightInfoBottom{
+  display: block;
+  text-align: center;
+  color: grey;
+  font-weight: lighter;
+  font-family: arial;
+  font-size: 11pt;
+}
+
+#termsAndPolicy{
+  color: white;
+}
+
+#errorMsgDiv{
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+  color: #111;
+  padding: 10px 15px;
+  border: none;
+  filter:opacity(50%);
+}
+
+.openbtn:hover {
+  /* background-color: #444; */
+  filter:opacity(100%);
+}
+
+#searchCollapsebtn {
+  cursor: pointer;
+  background-color: white;
+  color: #111;
+  width: 60px;
+  height: 50px;
+  background-image: url('../icons/searchCollapseIcon.png');
+  background-repeat: no-repeat;
+  background-position: 15px 10px;
+  background-size: 25px 25px;
+  border: none;
+  filter:opacity(50%);
+}
+
+#searchCollapsebtn:hover {
+  /* background-color: #444; */
+  filter:opacity(100%);
+}
+
+#searchBar{
+  margin:0;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('../icons/searchBarIcon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+a.livesearch{
+  text-decoration: none;
+}
+
+div.livesearch{
+  border-top: solid;
+  border-width: thin;
+  border-color: #ccc;
+  padding: 20px;
+  color: black;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+div.livesearch:hover{
+  background-color:#efefef;
+}
+
+#liveSearchDiv{
+  margin-top: 5px;
+  border:none;
+}
+
+input[type=button].likebtn{
+  background-image: url('../icons/likeBtn.png');
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 50px 50px;
+  padding: 20px;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  width: 50px;
+  background-color: transparent;
+}
+
+.likebtnDisabled{
+  background-image: url('../icons/likeBtn.png');
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 50px 50px;
+  padding: 20px;
+  width: 50px;
+  height: 50px;
+  margin:0;
+  background-color: transparent;
+}
+
+span.likeBtn{
+  background-size: 35px 35px;
+  background-position: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+span.dislikeBtn{
+  background-size: 23px 23px;
+  background-position: 10px 0px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+input[type=button].activeLikeBtn, input[type=button].likebtn:hover{
+  filter: brightness(0) invert(1);
+}
+
+input[type=button].dislikebtn{
+  background-image: url('../icons/dislikeBtn.png');
+  background-repeat: no-repeat;
+  background-position: 8px 6px;
+  background-size: 35px 35px;
+  padding: 20px;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  width: 50px;
+  background-color: transparent;
+}
+
+.dislikebtnDisabled{
+  background-image: url('../icons/dislikeBtn.png');
+  background-repeat: no-repeat;
+  background-position: 8px 8px;
+  background-size: 35px 35px;
+  padding: 20px;
+  width: 50px;
+  height: 50px;
+  margin:0;
+  background-color: transparent;
+}
+
+input[type=button].activeDislikeBtn, input[type=button].dislikebtn:hover{
+  filter: brightness(0) invert(1);
+}
+
+
+#content{
+  box-sizing: border-box;
+  border-style: none;
+  border-width: thin;
+}
+#contentContainer{
+  transition: margin-left .5s;
+  /* margin-top: 50px; */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.topFixedDiv{
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: white;
+  color: black;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+input[type=email],input[type=text],input[type=date],input[type=password],select{
+  font-size: 10pt;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 10px;
+}
+
+input[type=submit],input[type=button]{
+  font-size: 10pt;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  margin-top: 10px;
+}
+
+#formContent, #formContentAccount, #formContentAddStore, #formContentEditStore{
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 65px;
+  padding-bottom: 54px;
+  background-color: #262525;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#formContentContainer, #formContentContainerAccount{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#formContent{
+  width: 500px;
+}
+
+#formContentAccount,#formContentAddStore, #formContentEditStore{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#loginForm, #registrationForm  {
+  width: 100%;
+}
+
+.loginForm-title {
+  padding-bottom: 49px;
+  display: block;
+  font-size: 39px;
+  color: white;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.inputWrap {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid #d9d9d9;
+  margin-bottom: 20px;
+}
+
+.inputLabel {
+  font-size: 18px;
+  color: white;
+  line-height: 1.5;
+  padding-left: 7px;
+}
+
+.formInput {
+  font-size: 16px;
+  color: white;
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  height: 55px;
+  background: transparent;
+  padding: 0 7px 0 43px;
+}
+
+.textAreaInput {
+  font-size: 10pt;
+  color: white;
+  width: 100%;
+  background: transparent;
+  border-color:white;
+  border-style: solid;
+  border-width: thin;
+}
+
+input {
+	outline: none;
+	border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+.formText {
+  color:white;
+  font-size: 12pt;
+  line-height: 1.5;
+  text-transform: none;
+}
+
+#registerALink{
+  color:white;
+}
+
+.wrapLogin-btn, .wrapRegistration-btn {
+  width: 100%;
+}
+
+.login-btn, .registration-btn {
+  background: green;
+  font-size: 16px;
+  color: white;
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+}
+
+.login-btn, .registration-btn:hover{
+  cursor: pointer;
+}
+
+/* .regUserBtn{
+  width: 50%;
+  font-size: 10pt;
+  font-family: 'myriad-pro';
+  padding: 10px;
+  float: left;
+  display: block;
+} */
+
+input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: #757575;
+  margin-right: 0.5em;
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+}
+
+.linkBtn:link, .linkBtn:visited {
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10pt;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.linkBtn:hover, .linkBtn:active {
+  background-color: green;
+}
+
+textarea{
+  font-size: 10pt;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 10px;
+  resize:vertical;
+}
+
+.StoreLink{
+  text-decoration: none;
+  background-color: #262525;
+  color: white;
+  margin-right:30px;
+  border-style:none;
+  border-width:thin;
+  border-radius: 10px;
+  float: left;
+  width: 230px;
+  height: auto;
+  font-size: 25px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom:30px;
+  cursor: default;
+}
+
+.storeLinkImg{
+  object-fit: cover;
+  width: 100%;
+  max-width: initial;
+  height:180px;
+}
+
+.storeLinkImg:hover{
+  cursor: pointer;
+}
+.storeLinkText {
+  padding: 10px;
+}
+
+.storeLinkText:hover{
+  cursor: pointer;
+}
+
+.searchLink{
+  margin-top:30px;
+  margin-right:30px;
+  width: 80%;
+  margin: 0 auto;
+  float: none;
+  font-size: 25px;
+  height: 180px;
+  margin-bottom:30px;
+  margin: 0px auto;
+  cursor: pointer;
+}
+
+.searchLinkImg{
+  float: left;
+  position: absolute;
+  margin: auto;
+  /* max-height: 100%;
+  max-width: 33%;
+  min-height: 100%;
+  min-width: 33%; */
+  border-style:none;
+  object-fit: cover;
+  width: 33%;
+  width: 100%
+  max-width: initial;
+  height:100%;
+  /* object-fit: contain; */
+}
+
+.searchLinkText {
+  padding: 10px;
+}
+
+.StoreLinkImgcontainer:hover .overlay {
+  height: 100%;
+}
+
+.StoreLinkImgcontainer{
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(28, 28, 28);
+  opacity: 0.8;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.overlayDescription {
+  color: white;
+  font-size: 12pt;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-overflow: ellipsis;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.storePhotoPage{
+  object-fit: cover;
+  width: 560px;
+  height: 336px;
+  max-width: 100%;
+}
+
+.storePageText, .accountPageText {
+  padding:20px;
+  text-align:center;
+  border-style:solid;
+  border-width:thin;
+  color: white;
+  background-color: rgba(28,28,28);
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border:none;
+}
+
+.accountPref, .accountPrefTitle, .accountPrefBtn {
+  background-color: #4f4f4f;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 10px;
+  padding: 10px;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 10px;
+  border:none;
+}
+
+.accountPrefTitle{
+  border:none;
+}
+
+.accountPref{
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: 0px;
+}
+
+.accountSubPref{
+  background-color: #262525;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-top: 0px;
+  padding:15px;
+  color:white;
+  border:none;
+}
+
+.accountPrefBtn {
+  background-color: black;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 10px;
+  padding: 10px;
+  border-style: none;
+  border-width: none;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.accountPrefTitle {
+  background-color: #8c8c8c;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 15pt;
+  text-align: center;
+}
+
+.accountPrefTitle h4 {
+  margin:0;
+  color: black;
+}
+
+.claimedDiscount{
+  background-color: #262525;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 10px;
+  padding: 10px;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 10px;
+  border:none;
+}
+
+#message {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-style: solid;
+  border-width: thin;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 45px;
+  padding-right: 45px;
+  background-color:black;
+  color:white;
+  border-color:white;
+  opacity: 0.8;
+  font-family: 'myriad-pro';
+  font-size: 14pt;
+  /* border-radius: 25px; */
+  margin-left: 40px;
+  margin-bottom: 50px;
+  display:none;
+}
+
+#overlay-DiscountCode {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.93);
+  font-family:'myriad-pro';
+  text-align:center;
+  z-index: 3;
+}
+
+#HomeStoresDiv{
+  display: table;
+  margin:0px auto;
+  overflow:hidden;
+  padding: 30px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 0px;
+}
+
+#SearchResultsDiv{
+  padding-top: 30px;
+  margin:0px auto;
+  overflow:hidden;
+}
+
+#profilePicContainer{
+  width: 80%;
+  margin: 0px auto;
+}
+
+.manageStoreStyle {
+  color: white;
+  background-color: #262525;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/*For PC and Laptop*/
+@media only screen and (min-width: 1181px) {
+    .sidenav a, .dropdown-btn {
+      margin-left: 30px;
+    }
+    .StoreLink{
+      font-size: 12pt;
+    }
+    .searchLink{
+      margin-bottom: 30px;
+    }
+    .searchLinkText{
+      position: relative;
+      padding-left: 35%;
+      margin-bottom: 20px;
+    }
+}
+
+/*For Tablets*/
+@media only screen and (min-width: 735px) and (max-width: 1180px) {
+  #HomeStoresDiv{
+    padding-left: 50px;
+  }
+  .StoreLink{
+    width: 30%;
+    font-size: 12pt;
+    margin-right: 20px;
+  }
+  .searchLink{
+    width: 80%;
+    margin-left: 13px;
+    margin-right: 13px;
+    margin: 0px auto;
+    margin-bottom: 30px;
+  }
+  .searchLinkText{
+    position: relative;
+    padding-left: 35%;
+    margin-bottom: 20px;
+  }
+}
+/*For Smartphones*/
+@media only screen and (min-width: 634px) and (max-width: 734px) {
+
+  .StoreLink{
+    width: 45%;
+    font-size: 20px;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  .storeLinkImg{
+    width: 100%;
+    object-fit:;
+  }
+
+  span.likeBtn{
+    background-size: 35px 35px;
+    background-position: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  span.dislikeBtn{
+    background-size: 23px 23px;
+    background-position: 10px 0px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  .searchLink{
+    margin-bottom: 30px;
+    width: 42.7%;
+    margin-left: 13px;
+    margin-right: 13px;
+    float: left;
+  }
+
+  .searchLinkImg{
+    float: none;
+    margin: none;
+    max-height: none;
+    max-width: none;
+    min-height: none;
+    min-width: none;
+    float: left;
+    width:100%;
+    height: 200px;
+    position: relative;
+    border-style:none;
+    border-radius: 10px 10px 0px 0px;
+    /* object-fit: cover; */
+  }
+  .storePhotoPage{
+    width: 100%;
+    height: 480px;
+    object-fit:;
+  }
+  .storePageText {
+    width: 100%;
+  }
+  #formContentAccount, #formContentAddStore, #formContentEditStore{
+    width: 100%;
+  }
+  #profilePicContainer{
+    width: 100%;
+  }
+
+  #formContentAccount, #formContentAddStore, #formContentEditStore, .manageStoreStyle, #profilePicContainer, #formContentAccount, .storePageText,.accountPrefTitle,.claimedDiscount,.accountSubPref,.accountPref,.accountPrefBtn{
+    width: 100%;
+  }
+  .accountPrefBtn{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  #aboutBtnLinks{
+    width: 100%;
+  }
+
+  .aboutBtn{
+    margin: 0px auto;
+    width: 50%;
+    display: block;
+    margin-top: 30px;
+    float: none;
+  }
+}
+
+/*For small Smartphones*/
+@media only screen and (min-width: 435px) and (max-width: 633px) {
+    .sidenav a, .dropdown-btn {font-size: 20px;}
+
+    #HomeStoresDiv{
+      padding-left: 0px;
+    }
+
+    .StoreLink{
+      width: 100%;
+      font-size: 16px;
+      height: auto;
+    }
+    .overlayDescription {
+      font-size: 18px;
+    }
+    .storeLinkImg{
+      width:100%;
+      height: 280px;
+      object-fit:
+    }
+
+    span.likeBtn{
+      background-size: 35px 35px;
+      background-position: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    span.dislikeBtn{
+      background-size: 23px 23px;
+      background-position: 10px 0px;
+      padding-top: 0px;
+      padding-bottom: 5px;
+    }
+
+    .searchLink{
+      margin-bottom: 30px;
+      width: 42.7%;
+      margin-left: 13px;
+      margin-right: 13px;
+      float: left;
+    }
+
+    .searchLinkImg{
+      float: none;
+      margin: none;
+      max-height: none;
+      max-width: none;
+      min-height: none;
+      min-width: none;
+      width:100%;
+      height: 200px;
+      position: relative;
+      border-style:none;
+      border-radius: 10px 10px 0px 0px;
+      /* object-fit: cover; */
+    }
+    .storePhotoPage{
+      width: 100%;
+      height: 380px;
+      object-fit:;
+    }
+    .storePageText {
+      width: 100%;
+    }
+    #formContentAccount, #formContentAddStore, #formContentEditStore{
+      width: 100%;
+    }
+    #profilePicContainer{
+      width: 100%;
+    }
+
+    #formContentAccount, #formContentAddStore, #formContentEditStore, .manageStoreStyle, #profilePicContainer, #formContentAccount, .storePageText,.accountPrefTitle,.claimedDiscount,.accountSubPref,.accountPref,.accountPrefBtn{
+      width: 100%;
+    }
+    .accountPrefBtn{
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    #aboutBtnLinks{
+      width: 100%;
+    }
+
+    .aboutBtn{
+      margin: 0px auto;
+      width: 50%;
+      display: block;
+      margin-top: 30px;
+      float: none;
+    }
+}
+
+/*For very small Smartphones*/
+@media only screen and (max-width: 434px) {
+    .sidenav a, .dropdown-btn {font-size: 20px;}
+
+    #HomeStoresDiv{
+      padding-left: 0px;
+    }
+
+    .StoreLink{
+      width: 100%;
+      font-size: 16px;
+      height: auto;
+    }
+    .overlayDescription {
+      font-size: 18px;
+    }
+    .storeLinkImg{
+      width:100%;
+      height: 200px;
+      object-fit:
+    }
+
+    span.likeBtn{
+      background-size: 35px 35px;
+      background-position: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    span.dislikeBtn{
+      background-size: 23px 23px;
+      background-position: 10px 0px;
+      padding-top: 0px;
+      padding-bottom: 5px;
+    }
+
+    .searchLink{
+      text-decoration: none;
+      border-style:none;
+      border-width:thin;
+      border-radius: 10px;
+      width: 100%;
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .searchLinkImg{
+      float: none;
+      margin: none;
+      max-height: none;
+      max-width: none;
+      min-height: none;
+      min-width: none;
+      width:100%;
+      height: 200px;
+      position: relative;
+      border-style:none;
+      border-radius: 10px 10px 0px 0px;
+      /* object-fit: cover; */
+    }
+    .storePhotoPage{
+      width: 100%;
+      height: 280px;
+      object-fit:;
+    }
+    .storePageText {
+      width: 100%;
+    }
+    #formContentAccount, #formContentAddStore, #formContentEditStore{
+      width: 100%;
+    }
+    #profilePicContainer{
+      width: 100%;
+    }
+
+    #formContentAccount, #formContentAddStore, #formContentEditStore, .manageStoreStyle, #profilePicContainer, #formContentAccount, .storePageText,.accountPrefTitle,.claimedDiscount,.accountSubPref,.accountPref,.accountPrefBtn{
+      width: 100%;
+    }
+    .accountPrefBtn{
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    #aboutBtnLinks{
+      width: 100%;
+    }
+
+    .aboutBtn{
+      margin: 0px auto;
+      width: 50%;
+      display: block;
+      margin-top: 30px;
+      float: none;
+    }
+}
+@media only screen and (orientation: landscape) and (max-height: 534px) {
+
+}
